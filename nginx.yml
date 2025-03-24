@@ -6,7 +6,7 @@
 
   tasks:
     - name: installing nginx
-      dnf:
+      apt:
         name: nginx 
         state: present
 
