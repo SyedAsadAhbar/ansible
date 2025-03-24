@@ -1,0 +1,22 @@
+---
+- name: nginx installation 
+  hosts: localhost
+  become: yes
+  gather_facts: no
+
+  tasks:
+    - name: installing nginx
+      dnf:
+        name: nginx 
+        state: present
+
+    - name: adding content
+      copy:
+        content: "welcome to nginx"
+        dest: /var/www/html/index.html
+
+    - name: starte the service
+      service: 
+        name: nginx
+        state: started
+
