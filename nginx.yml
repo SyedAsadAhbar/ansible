@@ -12,7 +12,7 @@
 
     - name: adding content
       copy:
-        content: "welcome to nginx"
+        content: "welcome again to nginx"
         dest: /var/www/html/index.html
 
     - name: starte the service
